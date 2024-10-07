@@ -1,10 +1,10 @@
 import React from "react";
-import Navbar from "./components/Navbar";
+// import Navbar from "./components/Navbar";
 import Home from "./components/Home";
-import Gallery from "./components/Gallery";
-import About from "./components/About";
-import Shop from "./components/Shop";
-import Contact from "./components/Contact";
+// import Gallery from "./components/Gallery";
+// import About from "./components/About";
+// import Shop from "./components/Shop";
+// import Contact from "./components/Contact";
 import "./App.css";
 
 function App() {
