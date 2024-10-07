@@ -43,6 +43,10 @@
   text-decoration: none;
 }
 
+.navbar ul li a:hover {
+  color: rgb(252, 208, 126);
+}
+
 /* Right Section: Shopping Cart Icon */
 .navbar-right {
   flex: 1;

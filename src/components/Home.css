@@ -1,42 +1,28 @@
-.home {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
-  
-  .fade-text {
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 2.5rem;
-    color: #333;
-    opacity: 0; /* Initially hidden */
-    transition: opacity 1s ease; /* Smooth transition */
-  }
-  
-  /* Fade-in effect */
-  .fade-in {
-    opacity: 1; /* Fully visible */
-  }
-  
-  /* Fade-out effect */
-  .fade-out {
-    opacity: 0; /* Fully hidden */
-  }
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
 
-  #ComingSoon {
-    /* color: rgb(252, 208, 126); */
-    font-size: 50px;
-  }
+.gallery-item {
+  text-align: center;
+}
 
-  .sixtyfour-convergence-couscous {
-    font-family: "Sixtyfour Convergence", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-    font-variation-settings:
-      "BLED" 0,
-      "SCAN" 0,
-      "XELA" 0,
-      "YELA" 0;
-  }
-  
+.gallery-image {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+h3 {
+  font-size: 1.2rem;
+  margin: 10px 0;
+  color: #333;
+}
+
+p {
+  font-size: 1rem;
+  color: #777;
+}
