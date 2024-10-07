@@ -10,12 +10,12 @@ import "./App.css";
 function App() {
   return (
     <div className="App">
-      <Navbar />
+      {/* <Navbar /> */}
       <Home />
-      <Gallery />
-      <About />
-      <Shop />
-      <Contact />
+      {/* <Gallery /> */}
+      {/* <About /> */}
+      {/* <Shop /> */}
+      {/* <Contact /> */}
     </div>
   );
 }
