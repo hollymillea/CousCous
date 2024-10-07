@@ -1,0 +1,50 @@
+/* Navbar container */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  color: rgb(78, 77, 77);
+  font-size: 1.2rem;
+  height: 60px;
+  background-color: #f4f4f4;
+}
+
+/* Left Section: COUSCOUS */
+.navbar-left {
+  flex: 1;
+}
+
+.navbar-left h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: rgb(78, 77, 77);
+}
+
+/* Center Section: Navigation Links */
+.navbar-center {
+  flex: 1;
+  text-align: center;
+}
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: inline-flex;
+}
+
+.navbar ul li {
+  margin-right: 20px;
+}
+
+.navbar ul li a {
+  color: rgb(78, 77, 77);
+  text-decoration: none;
+}
+
+/* Right Section: Shopping Cart Icon */
+.navbar-right {
+  flex: 1;
+  text-align: right;
+}
