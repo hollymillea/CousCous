@@ -22,11 +22,14 @@ function Home() {
 }
 
 const getPriceRange = (prices) => {
-  if (prices.length === 1) {
-    return `£${prices[0]}`;
+  const priceValues = Object.values(prices); // Extract the values from the object
+
+  if (priceValues.length === 1) {
+    return `£${priceValues[0]}`;
   }
-  const minPrice = Math.min(...prices);
-  const maxPrice = Math.max(...prices);
+
+  const minPrice = Math.min(...priceValues);
+  const maxPrice = Math.max(...priceValues);
 
   return `£${minPrice} - £${maxPrice}`;
 };

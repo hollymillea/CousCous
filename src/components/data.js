@@ -7,7 +7,10 @@ const holly = [
   {
     id: 1,
     title: "Magenetic",
-    prices: [30, 45],
+    prices: {
+      "A4": 30,
+      "A3": 40,
+    },
     imgSrc: surface10,
     paypalID: "YY37FCHVDARYS"
   },
