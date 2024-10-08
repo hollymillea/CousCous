@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import "./ItemPage.css";
 import holly from "./data";
+import PayPalButton from "./Paypal";
+// import Paypal from "./Paypal2";
 
 function ItemPage() {
   const { id } = useParams(); // Get artwork ID from URL
@@ -12,6 +14,8 @@ function ItemPage() {
 
   return (
     <div className="container">
+      <PayPalButton />
+      {/* <Paypal /> */}
       <div className="container-left">
         <img
           src={artwork.imgSrc}
