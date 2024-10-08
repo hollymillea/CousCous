@@ -9,12 +9,14 @@ const holly = [
     title: "Magenetic",
     price: 30,
     imgSrc: surface10,
+    paypalID: "YY37FCHVDARYS"
   },
   {
     id: 2,
     title: "FlowState",
     price: 30,
     imgSrc: surface15,
+    paypalID: "SHX2LGEUZPPBQ"
   },
   {
     id: 3,

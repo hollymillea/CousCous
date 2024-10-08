@@ -13,19 +13,18 @@ function ItemPage() {
   // useEffect to change PayPal container color after it's been rendered
   useEffect(() => {
     // Get the div we created for this and attach the PayPal button to it
-    const paypalContainer = document.getElementById("paypal-container-YY37FCHVDARYS");
+    const paypalContainer = document.getElementById(`paypal-container-${artwork.paypalID}`);
     if (paypalContainer) {
       window.paypal
         .HostedButtons({
-          hostedButtonId: "YY37FCHVDARYS",
+          hostedButtonId: artwork.paypalID,  // Dynamically use paypalID from artwork object
         })
-        .render("#paypal-container-YY37FCHVDARYS");
+        .render(`#paypal-container-${artwork.paypalID}`);
     }
-  }, []);
+  }, [artwork.paypalID]);  // Add artwork.paypalID as a dependency
 
   return (
     <div className="container">
-      <div id="paypal-container-YY37FCHVDARYS"></div>
       <div className="container-left">
         <img
           src={artwork.imgSrc}
@@ -64,6 +63,9 @@ function ItemPage() {
             A3
           </label>
         </div>
+
+        <div id={`paypal-container-${artwork.paypalID}`}></div>
+        
       </div>
     </div>
   );
