@@ -1,9 +1,7 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import "./ItemPage.css";
 import holly from "./data";
-import PayPalButton from "./Paypal";
-// import Paypal from "./Paypal2";
 
 function ItemPage() {
   const { id } = useParams(); // Get artwork ID from URL
@@ -12,10 +10,22 @@ function ItemPage() {
   // Simulated data for artwork details
   const artwork = holly[id - 1];
 
+  // useEffect to change PayPal container color after it's been rendered
+  useEffect(() => {
+    // Get the div we created for this and attach the PayPal button to it
+    const paypalContainer = document.getElementById("paypal-container-YY37FCHVDARYS");
+    if (paypalContainer) {
+      window.paypal
+        .HostedButtons({
+          hostedButtonId: "YY37FCHVDARYS",
+        })
+        .render("#paypal-container-YY37FCHVDARYS");
+    }
+  }, []);
+
   return (
     <div className="container">
-      <PayPalButton />
-      {/* <Paypal /> */}
+      <div id="paypal-container-YY37FCHVDARYS"></div>
       <div className="container-left">
         <img
           src={artwork.imgSrc}
