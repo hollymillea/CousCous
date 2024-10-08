@@ -13,12 +13,22 @@ function Home() {
           <Link to={`/artwork/${art.id}`}>
             <img src={art.imgSrc} alt={art.title} className="gallery-image" />
             <h3>{art.title}</h3>
-            <p>£{art.price}</p>
+            <p>{getPriceRange(art.prices)}</p>
           </Link>
         </div>
       ))}
     </div>
   );
 }
+
+const getPriceRange = (prices) => {
+  if (prices.length === 1) {
+    return `£${prices[0]}`;
+  }
+  const minPrice = Math.min(...prices);
+  const maxPrice = Math.max(...prices);
+
+  return `£${minPrice} - £${maxPrice}`;
+};
 
 export default Home;

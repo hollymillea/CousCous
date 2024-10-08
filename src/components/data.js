@@ -7,27 +7,27 @@ const holly = [
   {
     id: 1,
     title: "Magenetic",
-    price: 30,
+    prices: [30, 45],
     imgSrc: surface10,
     paypalID: "YY37FCHVDARYS"
   },
   {
     id: 2,
     title: "FlowState",
-    price: 30,
+    prices: [30],
     imgSrc: surface15,
     paypalID: "SHX2LGEUZPPBQ"
   },
   {
     id: 3,
     title: "Ajax",
-    price: 30,
+    prices: [30],
     imgSrc: surface18,
   },
   {
     id: 4,
     title: "Becoming",
-    price: 30,
+    prices: [30],
     imgSrc: surface20,
   },
 ];
