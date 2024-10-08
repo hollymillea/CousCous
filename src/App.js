@@ -1,22 +1,24 @@
 import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import "./App.css";
+
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
 // import Gallery from "./components/Gallery";
 // import About from "./components/About";
 // import Shop from "./components/Shop";
-import Contact from "./components/Contact";
-import "./App.css";
+// import Contact from "./components/Contact";
+import ItemPage from "./components/ItemPage";
 
 function App() {
   return (
-    <div className="App">
+    <Router>
       <Navbar />
-      <Home />
-      {/* <Gallery /> */}
-      {/* <About /> */}
-      {/* <Shop /> */}
-      <Contact />
-    </div>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/artwork/:id" element={<ItemPage />} />
+      </Routes>
+    </Router>
   );
 }
 
