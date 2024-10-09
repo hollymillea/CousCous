@@ -9,6 +9,7 @@ import Home from "./components/Home";
 // import Shop from "./components/Shop";
 // import Contact from "./components/Contact";
 import ItemPage from "./components/ItemPage";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/artwork/:id" element={<ItemPage />} />
       </Routes>
+      <Footer />
     </Router>
   );
 }
