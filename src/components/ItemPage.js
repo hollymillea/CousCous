@@ -1,6 +1,6 @@
   import React, { useEffect, useState } from "react";
   import { useParams } from "react-router-dom";
-  import "./ItemPage.css";
+  import "./css/ItemPage.css";
   import holly from "./data";
 
   function ItemPage() {

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { FiMenu } from "react-icons/fi"; // Import a menu icon
-import "./Navbar.css";
+import "./css/Navbar.css";
 
 function Navbar() {
   // State to manage menu visibility
