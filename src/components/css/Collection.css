@@ -1,0 +1,38 @@
+.collection-container {
+  padding: 20px;
+}
+
+.collection-title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.prints-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2-column grid */
+  gap: 20px; /* Space between grid items */
+}
+
+.print-item {
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.print-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.print-title {
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+.print-price {
+  font-size: 1rem;
+  color: #555;
+}
