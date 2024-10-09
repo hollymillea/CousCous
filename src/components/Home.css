@@ -22,7 +22,9 @@
   transform-origin: center center; /* Keeps the zoom centered */
 }
 
-
+.graffiti {
+  font-family: 'Most Wazted', sans-serif;
+}
 
 
 

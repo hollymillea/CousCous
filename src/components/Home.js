@@ -11,21 +11,21 @@ function Home() {
   return (
     <div className="collectionsContainer">
       <div id = "collectionHolly" className="collection">
-        <h1 className="collectionTextRight">holly</h1>
+        <h1 className="collectionTextRight graffiti">holly</h1>
         <div className="collectionImageContainer">
           <img className="collectionImage" src={holly[0].imgSrc} alt={holly[0].title} />
         </div>
       </div>
 
       <div id = "collectionIssy" className="collection">
-        <h1>issy</h1>
+        <h1 className="graffiti">issy</h1>
         <div className="collectionImageContainer">
           <img className="collectionImage" src={issy[1].imgSrc} alt={issy[1].title} />
         </div>
       </div>
 
       <div id = "collectionLeah" className="collection">
-        <h1 className="collectionTextRight">leah</h1>
+        <h1 className="collectionTextRight graffiti">leah</h1>
         <div className="collectionImageContainer">
           <img className="collectionImage" src={leah[3].imgSrc} alt={leah[3].title} />
         </div>

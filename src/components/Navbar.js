@@ -1,36 +1,19 @@
 import React from "react";
-import { FaShoppingCart } from "react-icons/fa"; // Import a shopping cart icon from react-icons
+import { FiMenu } from "react-icons/fi"; // Import a shopping cart icon from react-icons
 import "./Navbar.css";
 
 function Navbar() {
   return (
     <nav className="navbar">
-      {/* Left Section: COUSCOUS */}
+      {/* Left Section: SVG Cous Cous */}
       <div className="navbar-left">
-        <h1>COUSCOUS</h1>
-      </div>
-
-      {/* Center Section: Navigation Links */}
-      <div className="navbar-center">
-        <ul>
-          <li>
-            <a href="/">Home</a>
-          </li>
-          <li>
-            <a href="#about">About</a>
-          </li>
-          <li>
-            <a href="#shop">Shop</a>
-          </li>
-          <li>
-            <a href="#contact">Contact</a>
-          </li>
-        </ul>
+        <h1 className="couscous1 graffiti">Cous</h1>
+        <h1 className="couscous2 graffiti">Cous</h1>
       </div>
 
       {/* Right Section: Shopping Cart Icon */}
       <div className="navbar-right">
-        <FaShoppingCart size={24} />
+        <FiMenu size={24} />
       </div>
     </nav>
   );
