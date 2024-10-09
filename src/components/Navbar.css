@@ -61,3 +61,33 @@
   transform: rotate(-10deg); /* Adjust the degree as needed */
   transform-origin: top /* Change the origin point as needed */
 }
+
+/* Pop-Out Menu Styles */
+.pop-out-menu {
+  position: absolute; /* Position relative to the nearest positioned ancestor */
+  right: 20px; /* Adjust as necessary */
+  top: 60px; /* Adjust based on your navbar height */
+  background-color: white; /* Background color */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+  border-radius: 5px; /* Rounded corners */
+  z-index: 1000; /* Ensure it appears above other elements */
+}
+
+.pop-out-menu ul {
+  list-style-type: none; /* Remove bullet points */
+  margin: 0;
+  padding: 10px; /* Space around the list */
+}
+
+.pop-out-menu li {
+  margin: 10px 0; /* Space between items */
+}
+
+.pop-out-menu a {
+  color: rgb(78, 77, 77); /* Text color */
+  text-decoration: none; /* Remove underline */
+}
+
+.pop-out-menu a:hover {
+  color: rgb(252, 208, 126); /* Hover color */
+}
