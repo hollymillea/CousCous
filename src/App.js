@@ -10,6 +10,7 @@ import Home from "./components/Home";
 // import Contact from "./components/Contact";
 import ItemPage from "./components/ItemPage";
 import Footer from "./components/Footer";
+import Collection from "./components/Collection";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/collections/:name" element={<Collection />} />
         <Route path="/artwork/:id" element={<ItemPage />} />
       </Routes>
       <Footer />

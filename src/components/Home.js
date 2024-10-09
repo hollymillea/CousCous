@@ -10,42 +10,41 @@ function Home() {
 
   return (
     <div className="collectionsContainer">
-      <div id = "collectionHolly" className="collection">
-        <h1 className="collectionTextRight graffiti">holly</h1>
-        <div className="collectionImageContainer">
-          <img className="collectionImage" src={holly[0].imgSrc} alt={holly[0].title} />
+      {/* Holly Collection */}
+      <Link to="/collections/holly">
+        <div id="collectionHolly" className="collection">
+          <h1 className="collectionTextRight graffiti">holly</h1>
+          <div className="collectionImageContainer">
+            <img className="collectionImage" src={holly[0].imgSrc} alt={holly[0].title} />
+          </div>
         </div>
-      </div>
+      </Link>
 
-      <div id = "collectionIssy" className="collection">
-        <h1 className="graffiti">issy</h1>
-        <div className="collectionImageContainer">
-          <img className="collectionImage" src={issy[1].imgSrc} alt={issy[1].title} />
+      {/* Issy Collection */}
+      <Link to="/collections/issy">
+        <div id="collectionIssy" className="collection">
+          <h1 className="graffiti">issy</h1>
+          <div className="collectionImageContainer">
+            <img className="collectionImage" src={issy[1].imgSrc} alt={issy[1].title} />
+          </div>
         </div>
-      </div>
+      </Link>
 
-      <div id = "collectionLeah" className="collection">
-        <h1 className="collectionTextRight graffiti">leah</h1>
-        <div className="collectionImageContainer">
-          <img className="collectionImage" src={leah[3].imgSrc} alt={leah[3].title} />
+      {/* Leah Collection */}
+      <Link to="/collections/leah">
+        <div id="collectionLeah" className="collection">
+          <h1 className="collectionTextRight graffiti">leah</h1>
+          <div className="collectionImageContainer">
+            <img className="collectionImage" src={leah[3].imgSrc} alt={leah[3].title} />
+          </div>
         </div>
-      </div>
+      </Link>
     </div>
-    //   {collections.map((collection) => (
-    //     <div key={art.id} className="gallery-item">
-    //       <Link to={`/artwork/${art.id}`}>
-    //         <img src={art.imgSrc} alt={art.title} className="gallery-image" />
-    //         <h3>{art.title}</h3>
-    //         <p>{getPriceRange(art.prices)}</p>
-    //       </Link>
-    //     </div>
-    //   ))}
-    // </div>
   );
 }
 
 const getPriceRange = (prices) => {
-  const priceValues = Object.values(prices); // Extract the values from the object
+  const priceValues = Object.values(prices);
 
   if (priceValues.length === 1) {
     return `£${priceValues[0]}`;
