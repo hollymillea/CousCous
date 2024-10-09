@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { FiMenu } from "react-icons/fi"; // Import a menu icon
 import "./css/Navbar.css";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   // State to manage menu visibility
@@ -14,10 +15,12 @@ function Navbar() {
   return (
     <nav className="navbar">
       {/* Left Section: SVG Cous Cous */}
-      <div className="navbar-left">
-        <h1 className="couscous1 graffiti">Cous</h1>
-        <h1 className="couscous2 graffiti">Cous</h1>
-      </div>
+      <Link to="/">
+        <div className="navbar-left">
+          <h1 className="couscous1 graffiti">Cous</h1>
+          <h1 className="couscous2 graffiti">Cous</h1>
+        </div>
+      </Link>
 
       {/* Right Section: Menu Icon */}
       <div className="navbar-right">
