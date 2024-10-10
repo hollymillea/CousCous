@@ -33,17 +33,4 @@ function Home() {
   );
 }
 
-const getPriceRange = (prices) => {
-  const priceValues = Object.values(prices);
-
-  if (priceValues.length === 1) {
-    return `£${priceValues[0]}`;
-  }
-
-  const minPrice = Math.min(...priceValues);
-  const maxPrice = Math.max(...priceValues);
-
-  return `£${minPrice} - £${maxPrice}`;
-};
-
 export default Home;

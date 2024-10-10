@@ -8,14 +8,12 @@ function Collection() {
   const { name } = useParams(); // Get the collection name from the URL
 
   // Which collection are we looking at?
-  // const [prints, setPrints] = useState([]);
   const [selectedTab, setSelectedTab] = useState(name);
 
   let collection = collectionsData.find((collection) => collection.name === name);
 
   const handleTabClick = (tab) => {
     setSelectedTab(tab);
-    collection = collectionsData.find((collection) => collection.name === tab);
   };
 
   return (
@@ -50,12 +48,25 @@ function Collection() {
           <div key={index} className="print-item">
             <img src={print.imgSrc} alt={print.title} className="print-image" />
             <h3 className="print-title">{print.title}</h3>
-            <p className="print-price">£{print.price}</p>
+            <p className="print-price">{getPriceRange(print.prices)}</p>
           </div>
         ))}
       </div>
     </div>
   );
 }
+
+const getPriceRange = (prices) => {
+  const priceValues = Object.values(prices);
+
+  if (priceValues.length === 1) {
+    return `£${priceValues[0]}`;
+  }
+
+  const minPrice = Math.min(...priceValues);
+  const maxPrice = Math.max(...priceValues);
+
+  return `£${minPrice}-£${maxPrice}`;
+};
 
 export default Collection;
