@@ -1,11 +1,33 @@
-.collection-container {
+.collection-page {
   padding: 20px;
 }
 
-.collection-title {
-  font-size: 2rem;
+.tabs-container {
+  display: flex;
+  flex-wrap: wrap; /* Allow tabs to wrap into multiple lines */
+  justify-content: flex-start;
   margin-bottom: 20px;
+  border-bottom: 2px dashed #ddd;
 }
+
+.tab {
+  padding: 10px 20px;
+  margin-right: 10px;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  border-bottom: none;
+  border-radius: 5px 5px 0 0;
+  background-color: #f5f5f5;
+  font-size: 1.1rem;
+  white-space: nowrap; /* Prevent text from wrapping within a single tab */
+}
+
+.tab.active {
+  background-color: #fff;
+  font-weight: bold;
+  border-bottom: 2px solid #fff;
+}
+
 
 .prints-grid {
   display: grid;

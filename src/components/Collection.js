@@ -1,26 +1,61 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import holly from "./data"; // Assuming this is where your data is
-import "./css/Collection.css";
+import holly from "./data"; // Assuming this is your data source
+import './css/Collection.css'; // Include your CSS styles
 
 function Collection() {
-  const { name } = useParams(); // Get the collection name from URL params
+  const { name } = useParams(); // Get the collection name from the URL
+
+  // Which collection are we looking at?
   const [prints, setPrints] = useState([]);
+  const [selectedTab, setSelectedTab] = useState("All");
 
   useEffect(() => {
-    // Assuming 'holly' is your data source, and contains all collections
-    if (name === "holly") {
+    // Filter prints based on the selected tab
+    if (selectedTab === "Holly") {
       setPrints(holly);
-    } else if (name === "issy") {
+    } else if (selectedTab === "Issy") {
       setPrints(holly); // Replace with Issy's collection data
-    } else if (name === "leah") {
+    } else if (selectedTab === "Leah") {
       setPrints(holly); // Replace with Leah's collection data
+    } else {
+      setPrints([...holly]); // Show all prints if 'All' is selected
     }
-  }, [name]);
+  }, [selectedTab]);
+
+  const handleTabClick = (tab) => {
+    setSelectedTab(tab);
+  };
 
   return (
-    <div className="collection-container">
-      <h1 className="collection-title graffiti">{name} Collection</h1>
+    <div className="collection-page">
+      <div className="tabs-container">
+        {/* Tabs for each collection */}
+        <div
+          className={`tab ${selectedTab === "All" ? "active" : ""}`}
+          onClick={() => handleTabClick("All")}
+        >
+          All
+        </div>
+        <div
+          className={`tab ${selectedTab === "Holly" ? "active" : ""}`}
+          onClick={() => handleTabClick("Holly")}
+        >
+          Holly
+        </div>
+        <div
+          className={`tab ${selectedTab === "Issy" ? "active" : ""}`}
+          onClick={() => handleTabClick("Issy")}
+        >
+          Issy
+        </div>
+        <div
+          className={`tab ${selectedTab === "Leah" ? "active" : ""}`}
+          onClick={() => handleTabClick("Leah")}
+        >
+          Leah
+        </div>
+      </div>
 
       {/* Grid for prints */}
       <div className="prints-grid">

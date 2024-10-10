@@ -8,8 +8,8 @@ body {
   font-family: 'Courier New', Courier, monospace;
   margin: 0;
   padding: 0;
-  background-color: #f0f0f0;
-  color: rgb(78, 77, 77);
+  background-color: var(--background-colour);
+  color: var(--text-colour);
   font-weight: 800;
   width: 100%;
   height: 100%;
@@ -17,7 +17,7 @@ body {
 
 a {
   text-decoration: none;
-  color: rgb(78, 77, 77);
+  color: var(--text-colour);
 }
 
 section {
@@ -37,9 +37,9 @@ section {
   border-radius: 10px;
 }
 
-footer {
-  background-color: #333;
-  color: white;
-  text-align: center;
-  padding: 1em;
+/* Create global variables to store colours */
+:root {
+  --background-colour: #f0f0f0;
+  --text-colour: rgb(78, 77, 77);
+  --accent-colour: rgb(216, 134, 18);
 }

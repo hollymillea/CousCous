@@ -7,7 +7,7 @@
   display: flex;
   justify-content: flex-end; /* Align the icon to the right */
   padding: 10px 20px;
-  border-top: dashed rgb(78, 77, 77) 1px;
+  border-top: dashed var(--text-colour) 1px;
 }
 
 .footer a {

@@ -3,7 +3,7 @@
   display: flex;
   justify-content: space-between;
   padding: 20px 20px;
-  color: rgb(78, 77, 77);
+  color: var(--text-colour);
   font-size: 1.2rem;
 }
 
@@ -37,7 +37,7 @@
 }
 
 .navbar ul li a {
-  color: rgb(78, 77, 77);
+  color: var(--text-colour);
   text-decoration: none;
 }
 
@@ -67,7 +67,7 @@
   position: absolute; /* Position relative to the nearest positioned ancestor */
   right: 20px; /* Adjust as necessary */
   top: 60px; /* Adjust based on your navbar height */
-  background-color: #f0f0f0; /* Background color */
+  background-color: var(--background-colour);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
   border-radius: 5px; /* Rounded corners */
   z-index: 1000; /* Ensure it appears above other elements */
@@ -84,7 +84,7 @@
 }
 
 .pop-out-menu a {
-  color: rgb(78, 77, 77); /* Text color */
+  color: var(--text-colour); /* Text color */
   text-decoration: none; /* Remove underline */
 }
 
