@@ -4,42 +4,31 @@ import { Link } from "react-router-dom";
 import { collectionsData } from "../data/data";
 
 function Home() {
-  const holly = collectionsData[0];
-  const issy = holly;
-  const leah = holly;
-  const collections = [holly, issy, leah];
-
   return (
     <div className="collectionsContainer">
-      {/* Holly Collection */}
-      <Link to="/collections/holly">
-        <div id="collectionHolly" className="collection">
-          <h1 className="collectionTextRight graffiti">holly</h1>
-          <div className="collectionImageContainer">
-            <img className="collectionImage" src={holly[0].imgSrc} alt={holly[0].title} />
-          </div>
-        </div>
-      </Link>
 
-      {/* Issy Collection */}
-      <Link to="/collections/issy">
-        <div id="collectionIssy" className="collection">
-          <h1 className="graffiti">issy</h1>
-          <div className="collectionImageContainer">
-            <img className="collectionImage" src={issy[1].imgSrc} alt={issy[1].title} />
-          </div>
-        </div>
-      </Link>
+      {/* For each collection */}
+      {collectionsData.map((collection, index) => {
 
-      {/* Leah Collection */}
-      <Link to="/collections/leah">
-        <div id="collectionLeah" className="collection">
-          <h1 className="collectionTextRight graffiti">leah</h1>
-          <div className="collectionImageContainer">
-            <img className="collectionImage" src={leah[3].imgSrc} alt={leah[3].title} />
-          </div>
-        </div>
-      </Link>
+        const name = collection.name;
+        const imgSrc = collection.collectionImg;
+
+        // Flush the text to the right on odd rows
+        const oddRow = index % 2 === 0;
+        const leftOrRightClass = oddRow ? "collectionTextRight" : null;
+
+        // Create the collection component
+        return (
+          <Link to={`/collections/${name}`} key={index}>
+            <div id={`collection${name}`} className="collection">
+              <h1 className={`graffiti ${leftOrRightClass}`}>{name}</h1>
+              <div className="collectionImageContainer">
+                <img className="collectionImage" src={imgSrc} alt={name} />
+              </div>
+            </div>
+          </Link>
+        );
+      })}
     </div>
   );
 }

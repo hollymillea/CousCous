@@ -3,7 +3,8 @@ import surface15 from "./images/surface15.png";
 import surface18 from "./images/surface18.png";
 import surface20 from "./images/surface20.png";
 
-const holly = [
+// List of all products and their details
+const items = [
   {
     id: 1,
     title: "Magenetic",
@@ -34,5 +35,13 @@ const holly = [
     imgSrc: surface20,
   },
 ];
+
+
+// What should be displayed on the homepage?
+const holly = {
+    name: "holly",
+    collectionImg: surface10,
+    items: items
+};
 
 export default holly;
