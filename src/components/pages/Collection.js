@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import holly from "../data/data"; // Assuming this is your data source
+import { collectionsData } from "../data/data"; // Assuming this is your data source
 import '../css/Collection.css'; // Include your CSS styles
+
 
 function Collection() {
   const { name } = useParams(); // Get the collection name from the URL
@@ -9,6 +10,8 @@ function Collection() {
   // Which collection are we looking at?
   const [prints, setPrints] = useState([]);
   const [selectedTab, setSelectedTab] = useState("All");
+
+  const holly = collectionsData[0];
 
   useEffect(() => {
     // Filter prints based on the selected tab

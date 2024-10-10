@@ -1,11 +1,13 @@
   import React, { useEffect, useState } from "react";
   import { useParams } from "react-router-dom";
   import "../css/ItemPage.css";
-  import holly from "../data/data";
+  import { collectionsData } from "../data/data";
 
   function ItemPage() {
     const { id } = useParams(); // Get artwork ID from URL
     const [selectedSize, setSelectedSize] = useState("A4");
+
+    const holly = collectionsData[0];
 
     // Simulated data for artwork details
     const artwork = holly[id - 1];

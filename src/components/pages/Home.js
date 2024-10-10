@@ -1,9 +1,10 @@
 import React from "react";
 import "../css/Home.css";
-import holly from "../data/data";
 import { Link } from "react-router-dom";
+import { collectionsData } from "../data/data";
 
 function Home() {
+  const holly = collectionsData[0];
   const issy = holly;
   const leah = holly;
   const collections = [holly, issy, leah];
