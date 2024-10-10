@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import holly from "./data"; // Assuming this is your data source
-import './css/Collection.css'; // Include your CSS styles
+import holly from "../data/data"; // Assuming this is your data source
+import '../css/Collection.css'; // Include your CSS styles
 
 function Collection() {
   const { name } = useParams(); // Get the collection name from the URL

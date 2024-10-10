@@ -2,15 +2,11 @@ import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./App.css";
 
-import Navbar from "./components/Navbar";
-import Home from "./components/Home";
-// import Gallery from "./components/Gallery";
-// import About from "./components/About";
-// import Shop from "./components/Shop";
-// import Contact from "./components/Contact";
-import ItemPage from "./components/ItemPage";
-import Footer from "./components/Footer";
-import Collection from "./components/Collection";
+import Navbar from "./components/pages/components/Navbar";
+import Home from "./components/pages/Home";
+import ItemPage from "./components/pages/ItemPage";
+import Footer from "./components/pages/components/Footer";
+import Collection from "./components/pages/Collection";
 
 function App() {
   return (

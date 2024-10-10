@@ -1,7 +1,7 @@
-import surface10 from "../images/Holly/surface10.png";
-import surface15 from "../images/Holly/surface15.png";
-import surface18 from "../images/Holly/surface18.png";
-import surface20 from "../images/Holly/surface20.png";
+import surface10 from "../../images/Holly/surface10.png";
+import surface15 from "../../images/Holly/surface15.png";
+import surface18 from "../../images/Holly/surface18.png";
+import surface20 from "../../images/Holly/surface20.png";
 
 const holly = [
   {

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { FiMenu } from "react-icons/fi"; // Import a menu icon
-import "./css/Navbar.css";
+import "../../css/Navbar.css";
 import { Link } from "react-router-dom";
 
 function Navbar() {

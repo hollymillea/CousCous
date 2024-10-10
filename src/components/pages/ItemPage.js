@@ -1,7 +1,7 @@
   import React, { useEffect, useState } from "react";
   import { useParams } from "react-router-dom";
-  import "./css/ItemPage.css";
-  import holly from "./data";
+  import "../css/ItemPage.css";
+  import holly from "../data/data";
 
   function ItemPage() {
     const { id } = useParams(); // Get artwork ID from URL

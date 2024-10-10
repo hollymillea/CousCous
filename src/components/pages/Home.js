@@ -1,6 +1,6 @@
 import React from "react";
-import "./css/Home.css";
-import holly from "./data";
+import "../css/Home.css";
+import holly from "../data/data";
 import { Link } from "react-router-dom";
 
 function Home() {
