@@ -35,25 +35,20 @@
 }
 
 .print-item {
-  background-color: #fff;
-  padding: 10px;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
 
 .print-image {
   width: 100%;
   height: auto;
-  border-radius: 8px;
 }
 
 .print-title {
   font-size: 1.2rem;
-  margin: 10px 0;
+  margin: 2px 0px;
 }
 
 .print-price {
   font-size: 1rem;
-  color: #555;
+  margin: 2px 0px;
 }

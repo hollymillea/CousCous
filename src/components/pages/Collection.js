@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { collectionsData } from "../data/data"; // Assuming this is your data source
 import '../css/Collection.css'; // Include your CSS styles
@@ -10,7 +10,28 @@ function Collection() {
   // Which collection are we looking at?
   const [selectedTab, setSelectedTab] = useState(name);
 
-  let collection = collectionsData.find((collection) => collection.name === name);
+  var collection;
+
+  // If the all tab is selected we concatenate all the collections
+  if (name === "all") {
+    let allItems = [];
+
+    collectionsData.forEach(collection => {
+      collection.items.forEach(item => {
+        allItems.push(item);
+      })
+    });
+
+    // Make a temporary object to store in
+    collection = {
+      items: allItems
+    };
+  }
+  
+  // If not, a particular collection has been selected
+  else {
+    collection = collectionsData.find((collection) => collection.name === name);
+  }
 
   const handleTabClick = (tab) => {
     setSelectedTab(tab);
