@@ -24,6 +24,27 @@ function Collection() {
   const handleTabClick = (tab) => {
     setSelectedTab(tab);
   };
+  
+  let galleryDivs = [];
+  collections.map(collection => {
+      collection.items.map((print, index) => {
+        galleryDivs.push(
+        <Link to={`/item/${collection.name}/${index}`} key={`${collection.name}-${index}`}>
+          <div key={index} className="print-item">
+            <img src={print.imgSrc} alt={print.title} className="print-image" />
+            <h3 className="print-title">{print.title}</h3>
+            <p className="print-price">{getPriceRange(print.prices)}</p>
+          </div>
+        </Link>
+      )})
+  })
+
+  // Randomise the order of the items
+  galleryDivs = galleryDivs
+    .map(value => ({ value, sort: Math.random() }))
+    .sort((a, b) => a.sort - b.sort)
+    .map(({ value }) => value);
+
 
   return (
     <div className="collection-page">
@@ -54,20 +75,10 @@ function Collection() {
       {/* Grid for prints */}
       <div className="prints-grid">
         {/* Go through each item in the collections we want to display */}
-        {collections.map(collection => {
-          return(
-            collection.items.map((print, index) => {
-              return(
-              <Link to={`/item/${collection.name}/${index}`} key={`${collection.name}-${index}`}>
-                <div key={index} className="print-item">
-                  <img src={print.imgSrc} alt={print.title} className="print-image" />
-                  <h3 className="print-title">{print.title}</h3>
-                  <p className="print-price">{getPriceRange(print.prices)}</p>
-                </div>
-              </Link>
-              )})
-            )
-        })}
+        {galleryDivs.map(div => {
+          return(div);
+        })
+        }
       </div>
     </div>
   );
