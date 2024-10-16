@@ -31,7 +31,9 @@ function Collection() {
         galleryDivs.push(
         <Link to={`/item/${collection.name}/${index}`} key={`${collection.name}-${index}`}>
           <div key={index} className="print-item">
-            <img src={print.imgSrc} alt={print.title} className="print-image" />
+            <div className="print-image-container">
+              <img src={print.imgSrc} alt={print.title} className="print-image" />
+            </div>
             <h3 className="print-title">{print.title}</h3>
             <p className="print-price">{getPriceRange(print.prices)}</p>
           </div>
