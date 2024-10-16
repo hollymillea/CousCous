@@ -10,27 +10,15 @@ function Collection() {
   // Which collection are we looking at?
   const [selectedTab, setSelectedTab] = useState(name);
 
-  var collection;
+  let collections = [];
 
-  // If the all tab is selected we concatenate all the collections
   if (name === "all") {
-    let allItems = [];
-
-    collectionsData.forEach(collection => {
-      collection.items.forEach(item => {
-        allItems.push(item);
-      })
-    });
-
-    // Make a temporary object to store in
-    collection = {
-      items: allItems
-    };
+    collections = collectionsData;
   }
-  
   // If not, a particular collection has been selected
   else {
-    collection = collectionsData.find((collection) => collection.name === name);
+    let collection = collectionsData.find((collection) => collection.name === name);
+    collections = [collection];
   }
 
   const handleTabClick = (tab) => {
@@ -65,13 +53,21 @@ function Collection() {
 
       {/* Grid for prints */}
       <div className="prints-grid">
-        {collection.items.map((print, index) => (
-          <div key={index} className="print-item">
-            <img src={print.imgSrc} alt={print.title} className="print-image" />
-            <h3 className="print-title">{print.title}</h3>
-            <p className="print-price">{getPriceRange(print.prices)}</p>
-          </div>
-        ))}
+        {/* Go through each item in the collections we want to display */}
+        {collections.map(collection => {
+          return(
+            collection.items.map((print, index) => {
+              return(
+              <Link to={`/collections/${collection.name}/${index}`} key={`${collection.name}-${index}`}>
+                <div key={index} className="print-item">
+                  <img src={print.imgSrc} alt={print.title} className="print-image" />
+                  <h3 className="print-title">{print.title}</h3>
+                  <p className="print-price">{getPriceRange(print.prices)}</p>
+                </div>
+              </Link>
+              )})
+            )
+        })}
       </div>
     </div>
   );
