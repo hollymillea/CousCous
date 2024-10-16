@@ -4,40 +4,43 @@
   import { collectionsData } from "../data/data";
 
   function ItemPage() {
-    const { id } = useParams(); // Get artwork ID from URL
+    const { name, id } = useParams(); // Get artwork ID from URL
+
     const [selectedSize, setSelectedSize] = useState("A4");
 
-    const holly = collectionsData[0];
-
-    // Simulated data for artwork details
-    const artwork = holly[id - 1];
+    // Get the right collection
+    const collection = collectionsData.find((collection) => collection.name === name);
+    // Get the right item
+    const item = collection.items[0];
+    console.log(item);
 
     // useEffect to change PayPal container color after it's been rendered
     useEffect(() => {
       // Get the div we created for this and attach the PayPal button to it
-      const paypalContainer = document.getElementById(`paypal-container-${artwork.paypalID}`);
+      const paypalContainer = document.getElementById(`paypal-container-${item.paypalID}`);
+
       if (paypalContainer) {
         window.paypal
           .HostedButtons({
-            hostedButtonId: artwork.paypalID,  // Dynamically use paypalID from artwork object
+            hostedButtonId: item.paypalID,  // Dynamically use paypalID from artwork object
           })
-          .render(`#paypal-container-${artwork.paypalID}`);
+          .render(`#paypal-container-${item.paypalID}`);
       }
-    }, [artwork.paypalID]);  // Add artwork.paypalID as a dependency
+    }, [item.paypalID]);  // Add artwork.paypalID as a dependency
 
     return (
       <div className="container">
         <div className="container-left">
           <img
-            src={artwork.imgSrc}
-            alt={artwork.title}
+            src={item.imgSrc}
+            alt={item.title}
             className="artwork-image"
           />
-          <h1>{artwork.title}</h1>
+          <h1>{item.title}</h1>
 
           <div className="artwork-price">
             <h3>Price:</h3>
-            <p>£{artwork.prices[selectedSize]}</p>
+            <p>£{item.prices[selectedSize]}</p>
           </div>
         </div>
 
@@ -66,7 +69,7 @@
             </label>
           </div>
 
-          <div id={`paypal-container-${artwork.paypalID}`}></div>
+          <div id={`paypal-container-${item.paypalID}`}></div>
           
         </div>
       </div>

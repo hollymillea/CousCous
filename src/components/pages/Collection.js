@@ -58,7 +58,7 @@ function Collection() {
           return(
             collection.items.map((print, index) => {
               return(
-              <Link to={`/collections/${collection.name}/${index}`} key={`${collection.name}-${index}`}>
+              <Link to={`/item/${collection.name}/${index}`} key={`${collection.name}-${index}`}>
                 <div key={index} className="print-item">
                   <img src={print.imgSrc} alt={print.title} className="print-image" />
                   <h3 className="print-title">{print.title}</h3>

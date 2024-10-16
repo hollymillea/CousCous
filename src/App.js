@@ -15,7 +15,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/collections/:name" element={<Collection />} />
-        <Route path="/artwork/:id" element={<ItemPage />} />
+        <Route path="/item/:name/:id" element={<ItemPage />} />
       </Routes>
       <Footer />
     </Router>
