@@ -5,7 +5,7 @@
 
 
 .collectionTextRight {
-  text-align: right;
+  justify-content: flex-end;
 }
 
 .collectionImageContainer {
@@ -27,29 +27,15 @@
   font-family: 'Most Wazted', sans-serif;
 }
 
-
-
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  padding: 20px;
+.collectionName {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
-.gallery-item {
-  text-align: center;
-  overflow: hidden; /* Ensure image doesn't overflow when zoomed */
-}
-
-.gallery-image {
-  max-width: 100%;
-  height: auto;
-  object-fit: cover;
-  transition: transform 0.5s ease; /* Smooth transition for zoom */
-}
-
-.gallery-image:hover {
-  transform: scale(1.1); /* Zoom in slightly on hover */
+.collectionInsta {
+  font-size: small;
+  color: gray;
 }
 
 h3 {

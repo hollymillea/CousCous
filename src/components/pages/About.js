@@ -3,8 +3,8 @@ import React from "react";
 function About() {
   return (
     <section id="about" className="about">
-      <h2>About the Artist</h2>
-      <p>Learn more about Amma's journey as an abstract artist.</p>
+      <h2>What is this?</h2>
+      <p>Blah blah blah blah blah</p>
     </section>
   );
 }

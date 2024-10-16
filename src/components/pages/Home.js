@@ -21,7 +21,10 @@ function Home() {
         return (
           <Link to={`/collections/${name}`} key={index}>
             <div id={`collection${name}`} className="collection">
-              <h1 className={`graffiti ${leftOrRightClass}`}>{name}</h1>
+              <div className={`collectionName ${leftOrRightClass}`}>
+                <h1 className={`graffiti`}>{name}</h1>
+                <h1 className={`collectionInsta`}>@{collection.insta}</h1>
+              </div>
               <div className="collectionImageContainer">
                 <img className="collectionImage" src={imgSrc} alt={name} />
               </div>

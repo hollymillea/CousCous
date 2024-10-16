@@ -40,6 +40,7 @@ const items = [
 // What should be displayed on the homepage?
 const holly = {
     name: "holly",
+    insta: "hollymillea",
     collectionImg: surface10,
     items: items
 };

@@ -2,12 +2,14 @@ import holly from "./holly/holly";
 
 const issy = {
   name: "issy",
+  insta: "dissyugg",
   collectionImg: holly.items[1].imgSrc,
   items: []
 };
 
 const leah = {
   name: "leah",
+  insta: "leah_allen",
   collectionImg: holly.items[3].imgSrc,
   items: []
 };
