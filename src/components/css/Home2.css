@@ -26,10 +26,11 @@
 
   #ComingSoon {
     /* color: rgb(252, 208, 126); */
-    font-size: 50px;
+    font-size: 100px;
+    color: var(--accent-colour);
+    text-align: center;
   }
   
 .graffiti {
   font-family: 'Most Wazted', sans-serif;
-  color: var(--accent-colour)
 }
