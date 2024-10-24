@@ -1,0 +1,35 @@
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+  }
+  
+  .fade-text {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 2.5rem;
+    color: #333;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 1s ease; /* Smooth transition */
+  }
+  
+  /* Fade-in effect */
+  .fade-in {
+    opacity: 1; /* Fully visible */
+  }
+  
+  /* Fade-out effect */
+  .fade-out {
+    opacity: 0; /* Fully hidden */
+  }
+
+  #ComingSoon {
+    /* color: rgb(252, 208, 126); */
+    font-size: 50px;
+  }
+  
+.graffiti {
+  font-family: 'Most Wazted', sans-serif;
+  color: var(--accent-colour)
+}
